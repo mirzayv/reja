@@ -15,7 +15,7 @@ app.set("views", "views");
 app.set("view engine", "ejs");
 
 //4 Routing code
-app.get("/hello", function(req, res)  {
+/* app.get("/hello", function(req, res)  {
     //res.end(`<h1 style="background: red">Hello World by Komronali</h1>`);
      res.end(`<h1>Hello World</h1>`);
 });
@@ -23,6 +23,19 @@ app.get("/hello", function(req, res)  {
 app.get("/gift", function(req, res)  {
     //res.end(`<h1 style="background: red">Hello World by Komronali</h1>`);
      res.end(`<h1>Siz sovgalar bolimidasiz</h1>`);
+});
+
+app.get("/", function(req, res)  {
+     res.render('project');
+});
+ */
+app.post("/create-item", (req, res) =>{
+ console.log(req);
+  res.json({test: "success" });
+});
+
+app.get("/", function(req, res) {
+    res.render("harid");
 });
 
 const server = http.createServer(app);
