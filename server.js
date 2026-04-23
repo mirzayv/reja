@@ -2,27 +2,16 @@ console.log("Web Serverni boshlash");
 const express = require("express");
 const app = express();
 const http = require("http");
+const fs = require("fs");
 
-const user = {
-  name: "Bruce",
-  profession: "Software Engineer",
-  work: "Software Engineer in BIG TECH",
-  age: 22,
-  residence: "S.Korea",
-  adress: "S.Korea, Seoul",
-  languages: ["Uzbek", "Korean", "English"],
-  skills: ["Html", "Css", "Js", "NodeJS", "Python"],
-  extra_skills: [
-    "Bootstrap, Materialize",
-    "Styling, Sass",
-    "Django, Flask",
-    "GIT Knowledge",
-  ],
-  work_place: "IT Company",
-  about_me:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat feugiat placerat lobortis. Natoque.",
-  city: "Tashkent",
-};
+let user;
+fs.readFile("database/user.json", "utf8", (err, data) => {
+  if (err) {
+    console.log("ERROR", err);
+  } else {
+    user = JSON.parse(data);
+  }
+});
 
 //1: Kirsih code
 app.use(express.static("public"));
