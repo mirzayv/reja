@@ -57,8 +57,8 @@ app.post("/create-item", (req, res) => {
 app.get("/", function (req, res) {
   res.render("harid");
 });
-app.get("/resume", function (req, res) {
-  res.render("resume", { user: user });
+app.get("/author", function (req, res) {
+  res.render("author", { user: user });
 });
 
 const server = http.createServer(app);
