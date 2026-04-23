@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%=user.name%> – Resume</title>
+    <link rel="stylesheet" href="/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="left-sidebar">
+        <div class="profile-block">
+          <div class="profile-avatar">
+            <img
+              src="images/profile_img.png"
+              alt=`${<%=user.name%>}`
+            />
+          </div>
+          <p class="profile-name"><%=user.name%></p>
+          <p class="profile-role"><%=user.profession%></p>
+          <div class="social-row">
+            <a href="#" class="social-btn"
+              ><img
+                src="icons/Icons-facebook.svg"
+                alt="fb" /></a
+            ><a href="#" class="social-btn"
+              ><img
+                src="icons/Icons-instagram.svg"
+                alt="ig" /></a
+            ><a href="#" class="social-btn"
+              ><img
+                src="icons/Icons-twitter.svg"
+                alt="tw" /></a
+            ><a href="#" class="social-btn"
+              ><img
+                src="icons/Icons-linkedin.svg"
+                alt="li" /></a
+            ><a href="#" class="social-btn"
+              ><img
+                src="icons/Icons-Youtube.svg"
+                alt="yt" /></a
+            ><a href="#" class="social-btn"
+              ><img
+                src="icons/Icons-dribbble.svg"
+                alt="dr"
+            /></a>
+          </div>
+        </div>
+        <div class="s-divider"></div>
+        <div class="s-section">
+          <div class="about-row">
+            <span class="about-label">Age:</span
+            ><span class="about-val"><%=user.age%></span>
+          </div>
+          <div class="about-row">
+            <span class="about-label">Residence:</span
+            ><span class="about-val">BD</span>
+          </div>
+          <div class="about-row">
+            <span class="about-label">Freelance:</span
+            ><span class="about-val green">Available</span>
+          </div>
+          <div class="about-row">
+            <span class="about-label">Address:</span
+            ><span class="about-val">Dhaka, Bangladesh</span>
+          </div>
+        </div>
+        <div class="s-divider"></div>
+        <div class="s-section">
+          <p class="s-title">Languages</p>
+          <div class="bar-row"><span><%=user.languages[0]%></span><span>100%</span></div>
+          <div class="progress-track">
+            <div class="progress-fill" style="width: 100%"></div>
+          </div>
+          <div class="bar-row"><span><%=user.languages[1]%></span><span>80%</span></div>
+          <div class="progress-track">
+            <div class="progress-fill" style="width: 80%"></div>
+          </div>
+          <div class="bar-row"><span><%=user.languages[2]%></span><span>60%</span></div>
+          <div class="progress-track">
+            <div class="progress-fill" style="width: 60%"></div>
+          </div>
+        </div>
+        <div class="s-divider"></div>
+        <div class="s-section">
+          <p class="s-title">Skills</p>
+          <div class="bar-row"><span><%=user.skills[0]%></span><span>90%</span></div>
+          <div class="progress-track">
+            <div class="progress-fill" style="width: 90%"></div>
+          </div>
+          <div class="bar-row"><span><%=user.skills[1]%></span><span>85%</span></div>
+          <div class="progress-track">
+            <div class="progress-fill" style="width: 85%"></div>
+          </div>
+          <div class="bar-row"><span><%=user.skills[2]%></span><span>80%</span></div>
+          <div class="progress-track">
+            <div class="progress-fill" style="width: 80%"></div>
+          </div>
+          <div class="bar-row"><span><%=user.skills[3]%></span><span>75%</span></div>
+          <div class="progress-track">
+            <div class="progress-fill" style="width: 75%"></div>
+          </div>
+          <div class="bar-row"><span><%=user.skills[4]%></span><span>85%</span></div>
+          <div class="progress-track">
+            <div class="progress-fill" style="width: 85%"></div>
+          </div>
+        </div>
+        <div class="s-divider"></div>
+        <div class="s-section">
+          <p class="s-title">Extra Skills</p>
+          <div class="extra-item">
+            <div class="bullet-icon">
+              <span></span><span></span><span></span><span></span>
+            </div>
+           <%=user.extra_skills[0]%>
+          </div>
+          <div class="extra-item">
+            <div class="bullet-icon">
+              <span></span><span></span><span></span><span></span>
+            </div>
+           <%=user.extra_skills[1]%>
+          </div>
+          <div class="extra-item">
+            <div class="bullet-icon">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <%=user.extra_skills[2]%>
+          </div>
+        </div>
+        <div class="s-divider"></div>
+      </aside>
+      <main class="main-content">
+        <section id="home">
+          <div class="hero">
+            <div
+              class="d d-circle"
+              style="
+                top: 42px;
+                left: 38px;
+                width: 16px;
+                height: 16px;
+                border: 2px solid var(--yellow);
+              "
+            ></div>
+            <div
+              class="d d-circle"
+              style="
+                top: 62px;
+                left: 470px;
+                width: 16px;
+                height: 16px;
+                border: 2px solid #7eb942;
+              "
+            ></div>
+            <div
+              class="d d-circle"
+              style="
+                top: 42px;
+                right: 118px;
+                width: 16px;
+                height: 16px;
+                border: 2px solid #aaaaaa;
+                opacity: 0.5;
+              "
+            ></div>
+            <div
+              class="d"
+              style="
+                top: 80px;
+                right: 32px;
+                width: 14px;
+                height: 14px;
+                border: 2px solid var(--yellow);
+                transform: rotate(25deg);
+              "
+            ></div>
+            <div
+              class="d"
+              style="
+                bottom: 108px;
+                left: 364px;
+                width: 13px;
+                height: 13px;
+                border: 2px solid #4a7bf7;
+                transform: rotate(25deg);
+              "
+            ></div>
+            <div
+              class="d d-circle"
+              style="
+                bottom: 42px;
+                left: 66px;
+                width: 16px;
+                height: 16px;
+                border: 2px solid var(--yellow);
+                opacity: 0.6;
+              "
+            ></div>
+            <div
+              class="d d-circle"
+              style="
+                bottom: 48px;
+                right: 300px;
+                width: 16px;
+                height: 16px;
+                border: 2px solid #aaaaaa;
+                opacity: 0.5;
+              "
+            ></div>
+            <div
+              class="d"
+              style="
+                bottom: 28px;
+                right: 52px;
+                width: 0;
+                height: 0;
+                border-left: 8px solid transparent;
+                border-right: 8px solid transparent;
+                border-bottom: 14px solid #ff6b6b;
+                opacity: 0.7;
+              "
+            ></div>
+            <div class="hero-text">
+              <h1 class="hero-title">
+                <%=user.work%>
+              </h1>
+              <p class="hero-desc">
+                <%=user.about_me%>
+              </p>
+              <a href="#contact" class="btn-hire"
+                >HIRE ME
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" /></svg
+              ></a>
+            </div>
+            <div class="hero-photo">
+              <img
+                src="images/profile_img.png"
+                alt="Doctor"
+              />
+            </div>
+          </div>
+        </section>
+        <section id="services" class="section">
+          <div class="section-head">
+            <h2>My Services</h2>
+            <p>
+              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+              amet sint. Velit officia consequat duis enim velit mollit. lorem
+              ipsum
+            </p>
+          </div>
+          <div class="grid3">
+            <div class="service-card">
+              <div class="service-icon">
+                <img
+                  src="box_images/coding.svg"
+                  alt="Web Dev"
+                />
+              </div>
+              <p class="service-title">Web Development</p>
+              <p class="service-sub">Blog, e-commerce</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">
+                <img
+                  src="box_images/illustration.svg"
+                  alt="UI/UX"
+                />
+              </div>
+              <p class="service-title">UI/UX Design</p>
+              <p class="service-sub">Mobile app, website design</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon" style="width: 70px; height: 70px">
+                <img
+                  src="box_images/microphone.svg"
+                  alt="Sound"
+                />
+              </div>
+              <p class="service-title">Sound Design</p>
+              <p class="service-sub">Voice Over, Beat Making</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">
+                <img
+                  src="box_images/game-development.svg"
+                  alt="Game"
+                />
+              </div>
+              <p class="service-title">Game Design</p>
+              <p class="service-sub">Character Design, Props &amp; Objects</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon" style="width: 72px; height: 72px">
+                <img
+                  src="box_images/photographer.svg"
+                  alt="Photography"
+                />
+              </div>
+              <p class="service-title">Photography</p>
+              <p class="service-sub">Portrait, product photography</p>
+            </div>
+            <div class="service-card adv">
+              <p class="service-title">Advertising</p>
+              <p class="service-sub">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae
+                nulla diam in ac dictum a urna viverra morbi.
+              </p>
+              <a href="#" class="order-link">ORDER NOW →</a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <nav class="right-sidebar">
+        <div class="contrast-btn" id="contrastBtn">
+          <img
+            src="https://www.figma.com/api/mcp/asset/75a0616f-4334-443d-978d-217c777f35c2"
+            alt="contrast"
+          />
+        </div>
+        <div class="right-nav">
+          <div class="nav-item">
+            <span class="nav-bubble">Home</span
+            ><a href="#home" class="nav-btn active" id="nav-home"
+              ><img
+                src="icons/menu/home.svg"
+                alt="home"
+            /></a>
+          </div>
+          <div class="nav-item">
+            <span class="nav-bubble">Services</span
+            ><a href="#services" class="nav-btn" id="nav-services"
+              ><img
+                src="icons/menu/file-code.svg"
+                alt="services"
+            /></a>
+          </div>
+          <div class="nav-item">
+            <span class="nav-bubble">Portfolio</span
+            ><a href="#portfolio" class="nav-btn" id="nav-portfolio"
+              ><img
+                src="icons/menu/cv.svg"
+                alt="portfolio"
+            /></a>
+          </div>
+          <div class="nav-item">
+            <span class="nav-bubble">Blog</span
+            ><a href="#blog" class="nav-btn" id="nav-blog"
+              ><img
+                src="icons/menu/vector.svg"
+                alt="blog"
+            /></a>
+          </div>
+          <div class="nav-item">
+            <span class="nav-bubble">Contact</span
+            ><a href="#contact" class="nav-btn" id="nav-contact"
+              ><img
+                src="icons/menu/contact.svg"
+                alt="contact"
+            /></a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <script>
+      const sids = [
+        "home",
+        "services",
+        "pricing",
+        "portfolio",
+        "blog",
+        "contact",
+      ];
+      const nbtns = sids.map((id) => document.getElementById("nav-" + id));
+
+      function updateNav() {
+        let cur = "home";
+
+        sids.forEach((id) => {
+          const el = document.getElementById(id);
+          if (el && window.scrollY >= el.offsetTop - 120) cur = id;
+        });
+
+        nbtns.forEach((b, i) => {
+          if (b) b.classList.toggle("active", sids[i] === cur);
+        });
+      }
+
+      window.addEventListener("scroll", updateNav);
+
+      document.querySelectorAll(".port-tabs span").forEach((t) => {
+        t.addEventListener("click", () => {
+          document
+            .querySelectorAll(".port-tabs span")
+            .forEach((x) => x.classList.remove("active"));
+          t.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>
