@@ -14,15 +14,15 @@ fs.readFile("database/user.json", "utf8", (err, data) => {
 });
 
 //1: Kirsih code
-app.use(express.static("public"));
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+//app.use(express.static("public"));
+//app.use(express.json());
+//app.use(express.urlencoded({ extended: true }));
 
 //2: Session code
 //3: Views code
-app.set("views", "views");
+/* app.set("views", "views");
 app.set("view engine", "ejs");
-
+ */
 //4 Routing code
 /* app.get("/hello", function(req, res)  {
     //res.end(`<h1 style="background: red">Hello World by Komronali</h1>`);
