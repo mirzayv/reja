@@ -8,7 +8,7 @@
 // Masalan: countLetter("e", "engineer") → 3
 
 // masalani yechimi:
-function countLetter(letter, word) {
+/* function countLetter(letter, word) {
   let count = 0;
 
   for (let i = 0; i < word.length; i++) {
@@ -18,7 +18,20 @@ function countLetter(letter, word) {
   }
   return count;
 }
-console.log(countLetter("e", "engineer")); // 3
+console.log(countLetter("e", "engineer")); // 3 */
+
+/* function countLetter(letter, word) {
+  let count = 0;
+
+  for (let char of word) {
+    console.log(char, word, letter);
+    if (char === letter) {
+      count++;
+    }
+  }
+  return count;
+}
+console.log(countLetter("e", "engineer")); // 3 */
 
 //console.log('train task ishga tushdi!');
 //D-TASK
