@@ -33,6 +33,28 @@ console.log(countLetter("e", "engineer")); // 3 */
 }
 console.log(countLetter("e", "engineer")); // 3 */
 
+// Masalani izohi
+// B-TASK:
+// Shunday 1 parametrli function tuzing,
+// u berilgan string ichidagi raqamlar sonini qaytarsin.
+// MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
+
+// masalani yechimi:
+
+function countDigits(str) {
+  let count = 0;
+
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] >= "0" && str[i] <= "9") {
+      count++;
+    }
+  }
+
+  return count;
+}
+
+console.log(countDigits("ad2a54y79wet0sfgb9")); // 7
+
 //console.log('train task ishga tushdi!');
 //D-TASK
 /* console.log("TRAIN AREA!"); */
