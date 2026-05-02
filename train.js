@@ -41,7 +41,7 @@ console.log(countLetter("e", "engineer")); // 3 */
 
 // masalani yechimi:
 
-function countDigits(str) {
+/* function countDigits(str) {
   let count = 0;
 
   for (let i = 0; i < str.length; i++) {
@@ -53,9 +53,48 @@ function countDigits(str) {
   return count;
 }
 
-console.log(countDigits("ad2a54y79wet0sfgb9")); // 7
-
+console.log(countDigits("ad2a54y79wet0sfgb9")); // 7 */
 //console.log('train task ishga tushdi!');
+
+//Masalani izohi
+//TASK-C:
+
+//Shop nomli class tuzing, 3 ta parametr qabul qiladi (non, lag'mon, cola).
+//3 ta metod bo‘ladi: qoldiq, sotish, qabul.
+
+//masalani yechimi:
+class Shop {
+  constructor(non, lagmon, cola) {
+    this.non = non;
+    this.lagmon = lagmon;
+    this.cola = cola;
+  }
+
+  qoldiq() {
+    console.log(
+      `${this.non}ta non, ${this.lagmon}ta lag'mon, ${this.cola}ta cola mavjud`,
+    );
+  }
+
+  sotish(mahsulot, soni) {
+    this[mahsulot] -= soni;
+    console.log(`${soni}ta ${mahsulot} sotildi`);
+  }
+
+  qabul(mahsulot, soni) {
+    this[mahsulot] += soni;
+    console.log(`${soni}ta ${mahsulot} qabul qilindi`);
+  }
+}
+
+// test
+const shop = new Shop(4, 5, 2);
+
+shop.qoldiq();
+shop.sotish("non", 3);
+shop.qabul("cola", 4);
+shop.qoldiq();
+
 //D-TASK
 /* console.log("TRAIN AREA!"); */
 //D-TASK
