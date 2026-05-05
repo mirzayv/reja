@@ -63,7 +63,7 @@ console.log(countDigits("ad2a54y79wet0sfgb9")); // 7 */
 //3 ta metod bo‘ladi: qoldiq, sotish, qabul.
 
 //masalani yechimi:
-class Shop {
+/* class Shop {
   constructor(non, lagmon, cola) {
     this.non = non;
     this.lagmon = lagmon;
@@ -94,9 +94,29 @@ shop.qoldiq();
 shop.sotish("non", 3);
 shop.qabul("cola", 4);
 shop.qoldiq();
+ */
 
 //D-TASK
-/* console.log("TRAIN AREA!"); */
+
+// Masalani izohi
+// TASK-D:
+// Ikkita parametr ega function tuzing,
+// berilgan birinchi va ikkinchi parametr qiymatlari
+// o'zaro to'liq mos kelsa true qaytarsin.
+// Masalan: checkContent("mitgroup", "gmtiprou") return true
+
+function checkContent(str1, str2) {
+  if (str1.length !== str2.length) return false;
+
+  return str1.split("").sort().join("") === str2.split("").sort().join("");
+}
+
+// Testlar:
+console.log(checkContent("mitgroup", "gmtiprou")); // true
+console.log(checkContent("hello", "olehl")); // true
+console.log(checkContent("abc", "def")); // false
+console.log(checkContent("abc", "ab")); // false
+
 //D-TASK
 
 // console.log("Jack Ma maslahatlari");
