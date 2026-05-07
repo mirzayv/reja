@@ -99,9 +99,14 @@ document.addEventListener("click", function (e) {
   }
 });
 
+// delete all oper
+// step1
 document.getElementById("clean-all").addEventListener("click", function () {
-  axios.post("/delete-all", { delete_all: true }).then((response) => {
-    alert(response.data.state);
-    document.location.reload();
-  });
+  //step3
+  axios
+    .post("/delete-all", { delete_all: true }) // step 6
+    .then((response) => {
+      alert(response.data.state);
+      document.location.reload();
+    });
 });

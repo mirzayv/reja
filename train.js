@@ -105,7 +105,7 @@ shop.qoldiq();
 // o'zaro to'liq mos kelsa true qaytarsin.
 // Masalan: checkContent("mitgroup", "gmtiprou") return true
 
-function checkContent(str1, str2) {
+/* function checkContent(str1, str2) {
   if (str1.length !== str2.length) return false;
 
   return str1.split("").sort().join("") === str2.split("").sort().join("");
@@ -115,9 +115,28 @@ function checkContent(str1, str2) {
 console.log(checkContent("mitgroup", "gmtiprou")); // true
 console.log(checkContent("hello", "olehl")); // true
 console.log(checkContent("abc", "def")); // false
-console.log(checkContent("abc", "ab")); // false
+console.log(checkContent("abc", "ab")); // false */
 
-//D-TASK
+// Masalani izohi
+// TASK-E:
+// Shunday function tuzing,
+// u bitta string argumentini qabul qilib,
+// qabul qilingan stringni teskari ko'rinishda return qilsin.
+//
+// Masalan:
+// getReverse("hello") return "olleh"
+
+function getReverse(str) {
+  let reverse = "";
+
+  for (let i = str.length - 1; i >= 0; i--) {
+    reverse += str[i];
+  }
+
+  return reverse;
+}
+
+console.log(getReverse("hello")); // olleh
 
 // console.log("Jack Ma maslahatlari");
 /* const list = [
