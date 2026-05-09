@@ -37,7 +37,7 @@ console.log(countLetter("e", "engineer")); // 3 */
 // B-TASK:
 // Shunday 1 parametrli function tuzing,
 // u berilgan string ichidagi raqamlar sonini qaytarsin.
-// MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
+// masalan countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
 
 // masalani yechimi:
 
@@ -126,7 +126,7 @@ console.log(checkContent("abc", "ab")); // false */
 // Masalan:
 // getReverse("hello") return "olleh"
 
-function getReverse(str) {
+/* function getReverse(str) {
   let reverse = "";
 
   for (let i = str.length - 1; i >= 0; i--) {
@@ -136,7 +136,31 @@ function getReverse(str) {
   return reverse;
 }
 
-console.log(getReverse("hello")); // olleh
+console.log(getReverse("hello")); // olleh */
+
+// TASK-F
+
+// Masalani izohi
+// Yagona string argumentga ega findDoublers nomli
+// function tuzing.
+// Agar stringda bittadan ortiq bir xil harflar
+// ishtirok etgan bo‘lsa true, aks holda false qaytarsin.
+
+// Masalan:
+// findDoublers("hello") return true
+
+function findDoublers(str) {
+  for (let i = 0; i < str.length; i++) {
+    if (str.indexOf(str[i]) !== str.lastIndexOf(str[i])) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
+console.log(findDoublers("hello")); // true
+console.log(findDoublers("Bruce")); // false
 
 // console.log("Jack Ma maslahatlari");
 /* const list = [
