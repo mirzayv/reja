@@ -149,18 +149,42 @@ console.log(getReverse("hello")); // olleh */
 // Masalan:
 // findDoublers("hello") return true
 
-function findDoublers(str) {
-  for (let i = 0; i < str.length; i++) {
-    if (str.indexOf(str[i]) !== str.lastIndexOf(str[i])) {
-      return true;
+//function findDoublers(str) {
+//for (let i = 0; i < str.length; i++) {
+//if (str.indexOf(str[i]) !== str.lastIndexOf(str[i])) {
+//return true;
+//}
+//}
+
+//return false;
+//}
+
+//console.log(findDoublers("hello")); // true
+//console.log(findDoublers("Bruce")); // false
+
+// G-TASK
+
+// Masalani izohi
+// TASK-G:
+// Yagona parametrga ega function tuzing.
+// Array tarkibidagi birinchi eng katta qiymatning indeksini qaytarsin.
+// Masalan: getHighestIndex([5, 21, 12, 21, 8]) return 1
+
+function getHighestIndex(arr) {
+  let highest = arr[0];
+  let index = 0;
+
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > highest) {
+      highest = arr[i];
+      index = i;
     }
   }
 
-  return false;
+  return index;
 }
 
-console.log(findDoublers("hello")); // true
-console.log(findDoublers("Bruce")); // false
+console.log(getHighestIndex([5, 21, 12, 21, 8]));
 
 // console.log("Jack Ma maslahatlari");
 /* const list = [
