@@ -170,7 +170,7 @@ console.log(getReverse("hello")); // olleh */
 // Array tarkibidagi birinchi eng katta qiymatning indeksini qaytarsin.
 // Masalan: getHighestIndex([5, 21, 12, 21, 8]) return 1
 
-function getHighestIndex(arr) {
+/* function getHighestIndex(arr) {
   let highest = arr[0];
   let index = 0;
 
@@ -184,7 +184,24 @@ function getHighestIndex(arr) {
   return index;
 }
 
-console.log(getHighestIndex([5, 21, 12, 21, 8]));
+console.log(getHighestIndex([5, 21, 12, 21, 8])); */
+
+// H-TASK
+
+// Masalani izohi
+// TASK-H:
+// Integerlardan iborat arrayni qabul qilib,
+// faqatgina positive sonlarni olib
+// string holatida return qilsin.
+//
+// Masalan:
+// getPositive([1, -4, 2]) return "12"
+
+function getPositive(arr) {
+  return arr.filter((num) => num > 0).join("");
+}
+
+console.log(getPositive([1, -4, 2]));
 
 // console.log("Jack Ma maslahatlari");
 /* const list = [
