@@ -197,11 +197,43 @@ console.log(getHighestIndex([5, 21, 12, 21, 8])); */
 // Masalan:
 // getPositive([1, -4, 2]) return "12"
 
-function getPositive(arr) {
+/* function getPositive(arr) {
   return arr.filter((num) => num > 0).join("");
 }
 
-console.log(getPositive([1, -4, 2]));
+console.log(getPositive([1, -4, 2])); */
+
+// TASK-I
+
+// Masalani izohi
+// Array ichida eng ko'p takrorlangan raqamni topib qaytarsin.
+
+// Masalan:
+// majorityElement([1, 2, 3, 4, 5, 4, 3, 4]) return 4
+
+function majorityElement(arr) {
+  let max = 0;
+  let result = arr[0];
+
+  for (let i = 0; i < arr.length; i++) {
+    let count = 0;
+
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[i] === arr[j]) {
+        count++;
+      }
+    }
+
+    if (count > max) {
+      max = count;
+      result = arr[i];
+    }
+  }
+
+  return result;
+}
+
+console.log(majorityElement([1, 2, 3, 4, 5, 4, 3, 4]));
 
 // console.log("Jack Ma maslahatlari");
 /* const list = [
