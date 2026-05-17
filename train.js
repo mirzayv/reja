@@ -211,7 +211,7 @@ console.log(getPositive([1, -4, 2])); */
 // Masalan:
 // majorityElement([1, 2, 3, 4, 5, 4, 3, 4]) return 4
 
-function majorityElement(arr) {
+/* function majorityElement(arr) {
   let max = 0;
   let result = arr[0];
 
@@ -233,7 +233,30 @@ function majorityElement(arr) {
   return result;
 }
 
-console.log(majorityElement([1, 2, 3, 4, 5, 4, 3, 4]));
+console.log(majorityElement([1, 2, 3, 4, 5, 4, 3, 4]));/* */
+
+// TASK-J
+
+// Masalani izohi
+// String ichidagi eng uzun so'zni qaytarsin.
+
+// Masalan:
+// findLongestWord("I came from Uzbekistan!") return "Uzbekistan!"
+
+function findLongestWord(str) {
+  let words = str.split(" ");
+  let longest = words[0];
+
+  for (let i = 0; i < words.length; i++) {
+    if (words[i].length > longest.length) {
+      longest = words[i];
+    }
+  }
+
+  return longest;
+}
+
+console.log(findLongestWord("I came from Uzbekistan!"));
 
 // console.log("Jack Ma maslahatlari");
 /* const list = [
