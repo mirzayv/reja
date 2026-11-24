@@ -1,9 +1,13 @@
 const http = require("http");
 const mongodb = require("mongodb"); // OBJECT
 
-let db;
-const connectionString =
-  "mongodb+srv://komron:OYWZcKc03ZEljF02@cluster0.jhplugm.mongodb.net/Reja?retryWrites=true&w=majority";
+// MongoDB connection string comes from the environment, never from the code
+// e.g. MONGO_URL="mongodb+srv://<user>:<password>@<cluster>/Reja" npm start
+const connectionString = process.env.MONGO_URL;
+if (!connectionString) {
+  console.error("MONGO_URL is not set. See .env.example");
+  process.exit(1);
+}
 
 // TCP (doimiy boglanish) vs HTTP (1marttalik request)
 mongodb.connect(
